@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html class="{if isset($homepage)}on_hp {else}on_sub {/if}">
+<html>
 <head>
 	<meta charset="utf-8" />
 
@@ -43,8 +43,8 @@
 	$css_file_name = Less_Cache::Get($less_files, $config);
 
 	?>
-	<link rel="stylesheet" href="/css/<?php echo $css_file_name; ?>" />
 
+	<link rel="stylesheet" href="/css/<?php echo $css_file_name; ?>" />
 
 	<title>Let It Snow!</title>
 </head>
@@ -62,8 +62,6 @@
 		<div class="snow_back second"></div>
 	</div>
 	<!-- DO NOT COPY STUFF AFTER THIS TO YOUT SITE, UNLESS YOU LIKE COMIC SANS -->
-
-
 	<h1>
 		LET IT SNOOOOW
 	</h1>
