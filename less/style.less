@@ -31,12 +31,12 @@ body {
 	flex-direction: row;
 
 	& when (@snow_webkit_prefixes = true){
-		-webkit-flex-wrap: nowrap;
+		-webkit-flex-wrap: wrap;
 	}
 	& when (@snow_ms_prefixes = true){
-		-ms-flex-wrap: nowrap;
+		-ms-flex-wrap: wrap;
 	}
-	flex-wrap: nowrap;
+	flex-wrap: wrap;
 
 	& when (@snow_webkit_prefixes = true){
 		-webkit-justify-content: center;
@@ -64,12 +64,22 @@ body {
 
 	background: #c4dbe8;
 	font-family: "Comic Sans MS", sans-serif;
+	text-align: center;
 
 	h1 {
 		width: 100%;
-		text-align: center;
 		font-size: 60px;
-		color: #4e7489;	
+		color: #4e7489;
+	}
+
+	a.github {
+		font-size: 18px;
+		color: #4e7489;
+		
+		&:hover {
+			color: black;
+			text-decoration: none;
+		}
 	}
 }
 
@@ -349,6 +359,8 @@ body {
 		pointer-events: none;
 		user-select: none;
 		background: url(@snow_flake_front_image);
+		opacity: 0;
+		z-index: @snow_flake_front_z-index;
 
 		& when (@snow_webkit_prefixes = true){
 			-webkit-animation: snowfall_front @snow_flake_front_timing infinite @snow_flake_front_easing;
@@ -367,10 +379,10 @@ body {
 		}
 
 		animation: snowfall_front @snow_flake_front_timing infinite @snow_flake_front_easing;
-		opacity: 0;
-		z-index: 100;
 
 		&.second {
+			z-index: @snow_flake_front_z-index;
+
 			& when (@snow_webkit_prefixes = true){
 				-webkit-animation: snowfall_front_second @snow_flake_front_timing infinite @snow_flake_front_easing;
 			}
@@ -388,7 +400,6 @@ body {
 			}
 
 			animation: snowfall_front_second @snow_flake_front_timing infinite @snow_flake_front_easing;
-			z-index: 100;
 		}
 	}
 
@@ -401,6 +412,8 @@ body {
 		pointer-events: none;
 		user-select: none;
 		background: url(@snow_flake_mid_image);
+		opacity: 0;
+		z-index: @snow_flake_mid_z-index;
 
 		& when (@snow_webkit_prefixes = true){
 			-webkit-animation: snowfall_mid @snow_flake_mid_timing infinite @snow_flake_mid_easing;
@@ -419,10 +432,10 @@ body {
 		}
 
 		animation: snowfall_mid @snow_flake_mid_timing infinite @snow_flake_mid_easing;
-		opacity: 0;
-		z-index: 100;
 
 		&.second {
+			z-index: @snow_flake_mid_z-index;
+
 			& when (@snow_webkit_prefixes = true){
 				-webkit-animation: snowfall_mid_second @snow_flake_mid_timing infinite @snow_flake_mid_easing;
 			}
@@ -440,7 +453,6 @@ body {
 			}
 			
 			animation: snowfall_mid_second @snow_flake_mid_timing infinite @snow_flake_mid_easing;
-			z-index: 100;
 		}
 	}
 
@@ -453,6 +465,8 @@ body {
 		pointer-events: none;
 		user-select: none;
 		background: url(@snow_flake_back_image);
+		opacity: 0;
+		z-index: @snow_flake_back_z-index;
 
 		& when (@snow_webkit_prefixes = true){
 			-webkit-animation: snowfall_back @snow_flake_back_timing infinite @snow_flake_back_easing;
@@ -471,10 +485,10 @@ body {
 		}
 
 		animation: snowfall_back @snow_flake_back_timing infinite @snow_flake_back_easing;
-		opacity: 0;
-		z-index: 100;
 
 		&.second {
+			z-index: @snow_flake_back_z-index;
+
 			& when (@snow_webkit_prefixes = true){
 				-webkit-animation: snowfall_back_second @snow_flake_back_timing infinite @snow_flake_back_easing;
 			}
@@ -492,7 +506,6 @@ body {
 			}
 			
 			animation: snowfall_back_second @snow_flake_back_timing infinite @snow_flake_back_easing;
-			z-index: 100;
 		}
 	}
 }

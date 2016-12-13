@@ -62,9 +62,15 @@
 		<div class="snow_back second"></div>
 	</div>
 	<!-- DO NOT COPY STUFF AFTER THIS TO YOUT SITE, UNLESS YOU LIKE COMIC SANS -->
-	<h1>
-		LET IT SNOOOOW
-	</h1>
+	<div>
+		<h1>
+			LET IT SNOOOOW
+		</h1>
+		<div>
+			<a href="//github.com/wUFr/LetItSnow" class="github">Source code on Github</a>
+		</div>
+	</div>
+	
 </body>
 </html>
 <!-- THIS IS ACTUALLY END OF HTML CODE, WHAT ARE YOU LOOKING AT?! -->
