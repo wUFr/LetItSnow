@@ -83,260 +83,6 @@ body {
 	}
 }
 
-// THE STUFF YOU'RE LOOKING FOR BEGINS HERE
-// ----------------- DOWN HERE --------------------
-
-
-//
-// FOREGROUND SNOW ANIMATION
-//
-& when (@snow_flake_front_enabled = true){
-	@keyframes snowfall_front {
-		0% {top: 0;opacity: @snow_flake_front_opacity;left: 0px;}
-		30% {left: -30px;}
-		60% {left: -60px;}
-		100% {top: 100%;opacity: @snow_flake_front_opacity;left: 0px;}
-	}
-
-	@keyframes snowfall_front_second {
-		0% {top: -100%;opacity: @snow_flake_front_opacity;left: 20px;}
-		30% {left: 30px;}
-		60% {left: -25px;}
-		100% {top: 0;opacity: @snow_flake_front_opacity;left: 0;}
-	}
-
-	& when (@snow_webkit_prefixes = true){
-		@-webkit-keyframes snowfall_front {
-			0% {top: 0;opacity: @snow_flake_front_opacity;left: 0px;}
-			30% {left: -30px;}
-			60% {left: -60px;}
-			100% {top: 100%;opacity: @snow_flake_front_opacity;left: 0px;}
-		}
-
-		@-webkit-keyframes snowfall_front_second {
-			0% {top: -100%;opacity: @snow_flake_front_opacity;left: 20px;}
-			30% {left: 30px;}
-			60% {left: -25px;}
-			100% {top: 0;opacity: @snow_flake_front_opacity;left: 0;}
-		}
-	}
-
-	& when (@snow_moz_prefixes = true){
-		@-moz-keyframes snowfall_front {
-			0% {top: 0;opacity: @snow_flake_front_opacity;left: 0px;}
-			30% {left: -30px;}
-			60% {left: -60px;}
-			100% {top: 100%;opacity: @snow_flake_front_opacity;left: 0px;}
-		}
-
-		@-moz-keyframes snowfall_front_second {
-			0% {top: -100%;opacity: @snow_flake_front_opacity;left: 20px;}
-			30% {left: 30px;}
-			60% {left: -25px;}
-			100% {top: 0;opacity: @snow_flake_front_opacity;left: 0;}
-		}
-	}
-
-	& when (@snow_ms_prefixes = true){
-		@-ms-keyframes snowfall_front {
-			0% {top: 0;opacity: @snow_flake_front_opacity;left: 0px;}
-			30% {left: -30px;}
-			60% {left: -60px;}
-			100% {top: 100%;opacity: @snow_flake_front_opacity;left: 0px;}
-		}
-
-		@-ms-keyframes snowfall_front_second {
-			0% {top: -100%;opacity: @snow_flake_front_opacity;left: 20px;}
-			30% {left: 30px;}
-			60% {left: -25px;}
-			100% {top: 0;opacity: @snow_flake_front_opacity;left: 0;}
-		}
-	}
-
-	& when (@snow_o_prefixes = true){
-		@-o-keyframes snowfall_front {
-			0% {top: 0;opacity: @snow_flake_front_opacity;left: 0px;}
-			30% {left: -30px;}
-			60% {left: -60px;}
-			100% {top: 100%;opacity: @snow_flake_front_opacity;left: 0px;}
-		}
-
-		@-o-keyframes snowfall_front_second {
-			0% {top: -100%;opacity: @snow_flake_front_opacity;left: 20px;}
-			30% {left: 30px;}
-			60% {left: -25px;}
-			100% {top: 0;opacity: @snow_flake_front_opacity;left: 0;}
-		}
-	}
-}
-
-
-//
-// MIDGROUND SNOW ANIMATION
-//
-& when (@snow_flake_mid_enabled = true){
-	@keyframes snowfall_mid {
-		0% {top: 0;opacity: @snow_flake_mid_opacity;left: 0px;}
-		30% {left: 30px;}
-		60% {left: -20px;}
-		100% {top: 100%;opacity: @snow_flake_mid_opacity;left: 0px;}
-	}
-
-	@keyframes snowfall_mid_second {
-		0% {top: -100%;opacity: @snow_flake_mid_opacity;left: 20px;}
-		30% {left: -25px;}
-		60% {left: -30px;}
-		100% {top: 0;opacity: @snow_flake_mid_opacity;left: 0;}
-	}
-
-	& when (@snow_webkit_prefixes = true){
-		@-webkit-keyframes snowfall_mid {
-			0% {top: 0;opacity: @snow_flake_mid_opacity;left: 0px;}
-			30% {left: 30px;}
-			60% {left: -20px;}
-			100% {top: 100%;opacity: @snow_flake_mid_opacity;left: 0px;}
-		}
-
-		@-webkit-keyframes snowfall_mid_second {
-			0% {top: -100%;opacity: @snow_flake_mid_opacity;left: 20px;}
-			30% {left: -25px;}
-			60% {left: -30px;}
-			100% {top: 0;opacity: @snow_flake_mid_opacity;left: 0;}
-		}
-	}
-
-	& when (@snow_moz_prefixes = true){
-		@-moz-keyframes snowfall_mid {
-			0% {top: 0;opacity: @snow_flake_mid_opacity;left: 0px;}
-			30% {left: 30px;}
-			60% {left: -20px;}
-			100% {top: 100%;opacity: @snow_flake_mid_opacity;left: 0px;}
-		}
-
-		@-moz-keyframes snowfall_mid_second {
-			0% {top: -100%;opacity: @snow_flake_mid_opacity;left: 20px;}
-			30% {left: -25px;}
-			60% {left: -30px;}
-			100% {top: 0;opacity: @snow_flake_mid_opacity;left: 0;}
-		}
-	}
-
-	& when (@snow_ms_prefixes = true){
-		@-ms-keyframes snowfall_mid {
-			0% {top: 0;opacity: @snow_flake_mid_opacity;left: 0px;}
-			30% {left: 30px;}
-			60% {left: -20px;}
-			100% {top: 100%;opacity: @snow_flake_mid_opacity;left: 0px;}
-		}
-
-		@-ms-keyframes snowfall_mid_second {
-			0% {top: -100%;opacity: @snow_flake_mid_opacity;left: 20px;}
-			30% {left: -25px;}
-			60% {left: -30px;}
-			100% {top: 0;opacity: @snow_flake_mid_opacity;left: 0;}
-		}
-	}
-
-	& when (@snow_o_prefixes = true){
-		@-o-keyframes snowfall_mid {
-			0% {top: 0;opacity: @snow_flake_mid_opacity;left: 0px;}
-			30% {left: 30px;}
-			60% {left: -20px;}
-			100% {top: 100%;opacity: @snow_flake_mid_opacity;left: 0px;}
-		}
-
-		@-o-keyframes snowfall_mid_second {
-			0% {top: -100%;opacity: @snow_flake_mid_opacity;left: 20px;}
-			30% {left: -25px;}
-			60% {left: -30px;}
-			100% {top: 0;opacity: @snow_flake_mid_opacity;left: 0;}
-		}
-	}
-}
-
-
-//
-// BACKGROUND SNOW ANIMATION
-//
-& when (@snow_flake_back_enabled = true){
-	@keyframes snowfall_back {
-		0% {top: 0;opacity: @snow_flake_back_opacity;left: 10px;}
-		30% {left: -8px;}
-		60% {left: -10px;}
-		100% {top: 100%;opacity: @snow_flake_back_opacity;left: -10px;}
-	}
-
-	@keyframes snowfall_back_second {
-		0% {top: -100%;opacity: @snow_flake_back_opacity;left: 20px;}
-		30% {left: -5px;}
-		60% {left: 15px;}
-		100% {top: 0;opacity: @snow_flake_back_opacity;left: 0;}
-	}
-
-	& when (@snow_webkit_prefixes = true){
-		@-webkit-keyframes snowfall_back {
-			0% {top: 0;opacity: @snow_flake_back_opacity;left: 10px;}
-			30% {left: -8px;}
-			60% {left: -10px;}
-			100% {top: 100%;opacity: @snow_flake_back_opacity;left: -10px;}
-		}
-
-		@-webkit-keyframes snowfall_back_second {
-			0% {top: -100%;opacity: @snow_flake_back_opacity;left: 20px;}
-			30% {left: -5px;}
-			60% {left: 15px;}
-			100% {top: 0;opacity: @snow_flake_back_opacity;left: 0;}
-		}
-	}
-
-	& when (@snow_moz_prefixes = true){
-		@-moz-keyframes snowfall_back {
-			0% {top: 0;opacity: @snow_flake_back_opacity;left: 10px;}
-			30% {left: -8px;}
-			60% {left: -10px;}
-			100% {top: 100%;opacity: @snow_flake_back_opacity;left: -10px;}
-		}
-
-		@-moz-keyframes snowfall_back_second {
-			0% {top: -100%;opacity: @snow_flake_back_opacity;left: 20px;}
-			30% {left: -5px;}
-			60% {left: 15px;}
-			100% {top: 0;opacity: @snow_flake_back_opacity;left: 0;}
-		}
-	}
-
-	& when (@snow_ms_prefixes = true){
-		@-ms-keyframes snowfall_back {
-			0% {top: 0;opacity: @snow_flake_back_opacity;left: 10px;}
-			30% {left: -8px;}
-			60% {left: -10px;}
-			100% {top: 100%;opacity: @snow_flake_back_opacity;left: -10px;}
-		}
-
-		@-ms-keyframes snowfall_back_second {
-			0% {top: -100%;opacity: @snow_flake_back_opacity;left: 20px;}
-			30% {left: -5px;}
-			60% {left: 15px;}
-			100% {top: 0;opacity: @snow_flake_back_opacity;left: 0;}
-		}
-	}
-
-	& when (@snow_o_prefixes = true){
-		@-o-keyframes snowfall_back {
-			0% {top: 0;opacity: @snow_flake_back_opacity;left: 10px;}
-			30% {left: -8px;}
-			60% {left: -10px;}
-			100% {top: 100%;opacity: @snow_flake_back_opacity;left: -10px;}
-		}
-
-		@-o-keyframes snowfall_back_second {
-			0% {top: -100%;opacity: @snow_flake_back_opacity;left: 20px;}
-			30% {left: -5px;}
-			60% {left: 15px;}
-			100% {top: 0;opacity: @snow_flake_back_opacity;left: 0;}
-		}
-	}
-}
 
 //
 // BASIC STYLES
@@ -350,6 +96,10 @@ body {
 	pointer-events: none; // just in case
 	overflow: hidden; // no scrollbars
 
+	& when (@snow_debug_mode = true){
+		border: 2px solid green;
+	}
+
 	.snow_front when (@snow_flake_front_enabled = true){
 		position: absolute;
 		top: 0;
@@ -359,8 +109,15 @@ body {
 		pointer-events: none;
 		user-select: none;
 		background: url(@snow_flake_front_image);
-		opacity: 0;
 		z-index: @snow_flake_front_z-index;
+
+		& when (@snow_debug_mode = true){
+			border: 1px solid red;
+
+			&:before {
+				content: "Front - FIRST";
+			}
+		}
 
 		& when (@snow_webkit_prefixes = true){
 			-webkit-animation: snowfall_front @snow_flake_front_timing infinite @snow_flake_front_easing;
@@ -381,7 +138,11 @@ body {
 		animation: snowfall_front @snow_flake_front_timing infinite @snow_flake_front_easing;
 
 		&.second {
-			z-index: @snow_flake_front_z-index;
+			& when (@snow_debug_mode = true){
+				&:before {
+					content: "Front - SECOND";
+				}
+			}
 
 			& when (@snow_webkit_prefixes = true){
 				-webkit-animation: snowfall_front_second @snow_flake_front_timing infinite @snow_flake_front_easing;
@@ -412,8 +173,15 @@ body {
 		pointer-events: none;
 		user-select: none;
 		background: url(@snow_flake_mid_image);
-		opacity: 0;
 		z-index: @snow_flake_mid_z-index;
+
+		& when (@snow_debug_mode = true){
+			border: 1px solid orange;
+
+			&:before {
+				content: "Mid - FIRST";
+			}
+		}
 
 		& when (@snow_webkit_prefixes = true){
 			-webkit-animation: snowfall_mid @snow_flake_mid_timing infinite @snow_flake_mid_easing;
@@ -434,7 +202,11 @@ body {
 		animation: snowfall_mid @snow_flake_mid_timing infinite @snow_flake_mid_easing;
 
 		&.second {
-			z-index: @snow_flake_mid_z-index;
+			& when (@snow_debug_mode = true){
+				&:before {
+					content: "Mid - SECOND";
+				}
+			}
 
 			& when (@snow_webkit_prefixes = true){
 				-webkit-animation: snowfall_mid_second @snow_flake_mid_timing infinite @snow_flake_mid_easing;
@@ -465,8 +237,15 @@ body {
 		pointer-events: none;
 		user-select: none;
 		background: url(@snow_flake_back_image);
-		opacity: 0;
 		z-index: @snow_flake_back_z-index;
+
+		& when (@snow_debug_mode = true){
+			border: 1px solid black;
+
+			&:before {
+				content: "Back - FIRST";
+			}
+		}
 
 		& when (@snow_webkit_prefixes = true){
 			-webkit-animation: snowfall_back @snow_flake_back_timing infinite @snow_flake_back_easing;
@@ -487,7 +266,11 @@ body {
 		animation: snowfall_back @snow_flake_back_timing infinite @snow_flake_back_easing;
 
 		&.second {
-			z-index: @snow_flake_back_z-index;
+			& when (@snow_debug_mode = true){
+				&:before {
+					content: "Back - SECOND";
+				}
+			}
 
 			& when (@snow_webkit_prefixes = true){
 				-webkit-animation: snowfall_back_second @snow_flake_back_timing infinite @snow_flake_back_easing;
