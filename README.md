@@ -13,8 +13,3 @@ LESS / CSS only snowfall animation
 **Used Less->CSS PHP compiler:** https://github.com/oyejorge/less.php  
 **Used Less->CSS JS compiler:** https://github.com/less/less.js  
 
-![Preview](https://snow.demo.wufr.net/letitsnow_preview.jpg)
-
-
-
-
