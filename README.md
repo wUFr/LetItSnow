@@ -1,7 +1,7 @@
 # LetItSnow
 LESS / CSS only snowfall animation
 
-**Online preview**: https://snow.demo.wufr.net/
+**Online preview**: https://snow.wufr.cz/
 
 
 **Usage:**
