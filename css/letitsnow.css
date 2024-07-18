@@ -1,0 +1,199 @@
+@keyframes snowfall_front {
+  0% {
+    transform: translate3d(0, -1%, 0);
+    opacity: 1;
+  }
+  30% {
+    transform: translate3d(30px, 30%, 0);
+    opacity: 1;
+  }
+  60% {
+    transform: translate3d(-20px, 60%, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, 99%, 0);
+    opacity: 1;
+  }
+}
+@keyframes snowfall_front_second {
+  0% {
+    transform: translate3d(0, -101%, 0);
+    opacity: 1;
+  }
+  30% {
+    transform: translate3d(-30px, -70%, 0);
+    opacity: 1;
+  }
+  60% {
+    transform: translate3d(20px, -40%, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, -1%, 0);
+    opacity: 1;
+  }
+}
+@keyframes snowfall_mid {
+  0% {
+    transform: translate3d(0, -1%, 0);
+    opacity: 0.7;
+  }
+  30% {
+    transform: translate3d(-15px, 30%, 0);
+    opacity: 0.7;
+  }
+  60% {
+    transform: translate3d(10px, 60%, 0);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate3d(0, 99%, 0);
+    opacity: 0.7;
+  }
+}
+@keyframes snowfall_mid_second {
+  0% {
+    transform: translate3d(0, -101%, 0);
+    opacity: 0.7;
+  }
+  30% {
+    transform: translate3d(15px, -70%, 0);
+    opacity: 0.7;
+  }
+  60% {
+    transform: translate3d(-10px, -40%, 0);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate3d(0, -1%, 0);
+    opacity: 0.7;
+  }
+}
+@keyframes snowfall_back {
+  0% {
+    transform: translate3d(0, -1%, 0);
+    opacity: 0.5;
+  }
+  30% {
+    transform: translate3d(-5px, 30%, 0);
+    opacity: 0.5;
+  }
+  60% {
+    transform: translate3d(5px, 60%, 0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate3d(0, 99%, 0);
+    opacity: 0.5;
+  }
+}
+@keyframes snowfall_back_second {
+  0% {
+    transform: translate3d(0, -101%, 0);
+    opacity: 0.5;
+  }
+  30% {
+    transform: translate3d(5px, -70%, 0);
+    opacity: 0.5;
+  }
+  60% {
+    transform: translate3d(-5px, -40%, 0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate3d(0, -1%, 0);
+    opacity: 0.5;
+  }
+}
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: stretch;
+  align-items: center;
+  background: black;
+  font-family: "Comic Sans MS", sans-serif;
+  text-align: center;
+}
+body h1 {
+  width: 100%;
+  font-size: 60px;
+  color: #4e7489;
+}
+body a.github {
+  font-size: 18px;
+  color: #4e7489;
+}
+body a.github:hover {
+  color: black;
+  text-decoration: none;
+}
+.snow_wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.snow_wrapper .snow_front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  background: url("/img/snow_front.webp");
+  z-index: 110;
+  animation: snowfall_front 20s infinite linear;
+}
+.snow_wrapper .snow_front.second {
+  animation: snowfall_front_second 20s infinite linear;
+}
+.snow_wrapper .snow_mid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  background: url("/img/snow_mid.webp");
+  z-index: 105;
+  animation: snowfall_mid 25s infinite linear;
+}
+.snow_wrapper .snow_mid.second {
+  animation: snowfall_mid_second 25s infinite linear;
+}
+.snow_wrapper .snow_back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  background: url("/img/snow_back.webp");
+  z-index: 100;
+  animation: snowfall_back 35s infinite linear;
+}
+.snow_wrapper .snow_back.second {
+  animation: snowfall_back_second 35s infinite linear;
+}
+

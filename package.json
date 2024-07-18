@@ -1,0 +1,25 @@
+{
+  "name": "letitsnow",
+  "version": "1.0.0",
+  "description": "Simple snowfall animation done only via CSS",
+  "main": "less/router.less",
+  "scripts": {
+    "build": "mix",
+    "watch": "mix watch",
+    "buildProd": "mix --production"
+  },
+  "devDependencies": {
+    "laravel-mix": "^6.0.6",
+    "less": "^4.1.1",
+    "less-loader": "^7.3.0"
+  },
+  "author": "wUFr",
+  "license": "MIT",
+  "dependencies": {
+    "laravel-mix": "^6.0.49"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:wUFr/lui-3_buttons.git"
+  }
+}

@@ -1,15 +1,15 @@
 # LetItSnow
 LESS / CSS only snowfall animation
 
-**Online preview**: https://snow.wufr.cz/
+**Online preview**:
 
+https://snow.wufr.cz/
 
-**Usage:**
-- Copy everything to your webserver root (or where is your "www" folder located)
-- Set chmod 777 on "css" folder
-- In index.php, you can uncomment JS LESS compilation script, to make your development bit faster
-- Configuration can be found in less/config.less file
+**Screenshot:**
 
-**Used Less->CSS PHP compiler:** https://github.com/oyejorge/less.php  
-**Used Less->CSS JS compiler:** https://github.com/less/less.js  
+![Preview](./_demo/preview.jpg)
 
+## How to use in your project:
+
+- A) Copy styles from `css/` and images from `img/` into your project and modify paths to images if needed.
+- B) Build from source less files by including `less/router.less` file in your project. Additionally you can override default configuration with your own.
