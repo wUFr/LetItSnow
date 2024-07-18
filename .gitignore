@@ -1,3 +1,3 @@
-/css/*.css
-/css/*.lesscache
-/css/*.list
+/css/
+
+/node_modules/
