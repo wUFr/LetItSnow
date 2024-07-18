@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:wUFr/lui-3_buttons.git"
+    "url": "git@github.com:wUFr/LetItSnow.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@wufr"
