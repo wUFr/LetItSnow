@@ -1,5 +1,5 @@
 {
-  "name": "letitsnow",
+  "name": "@wufr/letitsnow",
   "version": "1.0.0",
   "description": "Simple snowfall animation done only via CSS",
   "main": "less/router.less",
@@ -21,5 +21,8 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:wUFr/lui-3_buttons.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@wufr"
   }
 }
