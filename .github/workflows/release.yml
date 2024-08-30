@@ -28,7 +28,15 @@ jobs:
       run: npm install
     - name: Build
       run: npm run build
+    - name: Bump version
+      run: npm version patch
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Publish to GitHub Package Registry
       run: npm publish
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Push new version tag
+      run: git push --follow-tags
       env:
         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
