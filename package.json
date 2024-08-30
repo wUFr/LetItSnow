@@ -9,9 +9,12 @@
     "buildProd": "mix --production"
   },
   "devDependencies": {
+    "@semantic-release/github": "^10.1.7",
+    "@semantic-release/npm": "^12.0.1",
     "laravel-mix": "^6.0.6",
     "less": "^4.1.1",
-    "less-loader": "^7.3.0"
+    "less-loader": "^7.3.0",
+    "semantic-release": "^24.1.0"
   },
   "author": "wUFr",
   "license": "MIT",
