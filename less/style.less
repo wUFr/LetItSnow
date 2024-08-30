@@ -15,74 +15,15 @@ body {
 }
 
 body {
-	// I KNOW, THIS SHOULD BE IN MIXIN, BUT I WONT USE IT ANYWHERE ELSE, I PROMISE
-	& when (@snow_ms_prefixes = true){
-		display: -ms-flexbox;
-	}
-	& when (@snow_webkit_prefixes = true){
-		display: -webkit-flex;
-	}
 	display: flex;
-
-	& when (@snow_webkit_prefixes = true){
-		-webkit-flex-direction: row;
-	}
-	& when (@snow_ms_prefixes = true){
-		-ms-flex-direction: row;
-	}
 	flex-direction: row;
-
-	& when (@snow_webkit_prefixes = true){
-		-webkit-flex-wrap: wrap;
-	}
-	& when (@snow_ms_prefixes = true){
-		-ms-flex-wrap: wrap;
-	}
 	flex-wrap: wrap;
 
-	& when (@snow_webkit_prefixes = true){
-		-webkit-justify-content: center;
-	}
-	& when (@snow_ms_prefixes = true){
-		-ms-flex-pack: center;
-	}
 	justify-content: center;
-
-	& when (@snow_webkit_prefixes = true){
-		-webkit-align-content: stretch;
-	}
-	& when (@snow_ms_prefixes = true){
-		-ms-flex-line-pack: stretch;
-	}
 	align-content: stretch;
-
-	& when (@snow_webkit_prefixes = true){
-		-webkit-align-items: center;
-	}
-	& when (@snow_ms_prefixes = true){
-		-ms-flex-align: center;
-	}
 	align-items: center;
 
 	background: black;
-	font-family: "Comic Sans MS", sans-serif;
-	text-align: center;
-
-	h1 {
-		width: 100%;
-		font-size: 60px;
-		color: #4e7489;
-	}
-
-	a.github {
-		font-size: 18px;
-		color: #4e7489;
-
-		&:hover {
-			color: black;
-			text-decoration: none;
-		}
-	}
 }
 
 
@@ -95,6 +36,7 @@ body {
 	left: 0;
 	right: 0;
 	bottom: 0;
+
 	pointer-events: none; // just in case
 	overflow: hidden; // no scrollbars
 
@@ -106,12 +48,18 @@ body {
 		position: absolute;
 		top: 0;
 		left: 0;
+
+		z-index: @snow_flake_front_z-index;
+
 		width: 100%;
 		height: 100%;
+
 		pointer-events: none;
 		user-select: none;
+
 		background: url(@snow_flake_front_image);
-		z-index: @snow_flake_front_z-index;
+
+		animation: snowfall_front @snow_flake_front_timing infinite @snow_flake_front_easing;
 
 		& when (@snow_debug_mode = true){
 			border: 1px solid red;
@@ -121,48 +69,14 @@ body {
 			}
 		}
 
-		& when (@snow_webkit_prefixes = true){
-			-webkit-animation: snowfall_front @snow_flake_front_timing infinite @snow_flake_front_easing;
-		}
-
-		& when (@snow_moz_prefixes = true){
-			-moz-animation: snowfall_front @snow_flake_front_timing infinite @snow_flake_front_easing;
-		}
-
-		& when (@snow_ms_prefixes = true){
-			-ms-animation: snowfall_front @snow_flake_front_timing infinite @snow_flake_front_easing;
-		}
-
-		& when (@snow_o_prefixes = true){
-			-o-animation: snowfall_front @snow_flake_front_timing infinite @snow_flake_front_easing;
-		}
-
-		animation: snowfall_front @snow_flake_front_timing infinite @snow_flake_front_easing;
-
 		&.second {
+			animation: snowfall_front_second @snow_flake_front_timing infinite @snow_flake_front_easing;
+
 			& when (@snow_debug_mode = true){
 				&:before {
 					content: "Front - SECOND";
 				}
 			}
-
-			& when (@snow_webkit_prefixes = true){
-				-webkit-animation: snowfall_front_second @snow_flake_front_timing infinite @snow_flake_front_easing;
-			}
-
-			& when (@snow_moz_prefixes = true){
-				-moz-animation: snowfall_front_second @snow_flake_front_timing infinite @snow_flake_front_easing;
-			}
-
-			& when (@snow_ms_prefixes = true){
-				-ms-animation: snowfall_front_second @snow_flake_front_timing infinite @snow_flake_front_easing;
-			}
-
-			& when (@snow_o_prefixes = true){
-				-o-animation: snowfall_front_second @snow_flake_front_timing infinite @snow_flake_front_easing;
-			}
-
-			animation: snowfall_front_second @snow_flake_front_timing infinite @snow_flake_front_easing;
 		}
 	}
 
@@ -170,12 +84,18 @@ body {
 		position: absolute;
 		top: 0;
 		left: 0;
+
+		z-index: @snow_flake_mid_z-index;
+
 		width: 100%;
 		height: 100%;
+
 		pointer-events: none;
 		user-select: none;
+
 		background: url(@snow_flake_mid_image);
-		z-index: @snow_flake_mid_z-index;
+
+		animation: snowfall_mid @snow_flake_mid_timing infinite @snow_flake_mid_easing;
 
 		& when (@snow_debug_mode = true){
 			border: 1px solid orange;
@@ -185,48 +105,14 @@ body {
 			}
 		}
 
-		& when (@snow_webkit_prefixes = true){
-			-webkit-animation: snowfall_mid @snow_flake_mid_timing infinite @snow_flake_mid_easing;
-		}
-
-		& when (@snow_moz_prefixes = true){
-			-moz-animation: snowfall_mid @snow_flake_mid_timing infinite @snow_flake_mid_easing;
-		}
-
-		& when (@snow_ms_prefixes = true){
-			-ms-animation: snowfall_mid @snow_flake_mid_timing infinite @snow_flake_mid_easing;
-		}
-
-		& when (@snow_o_prefixes = true){
-			-o-animation: snowfall_mid @snow_flake_mid_timing infinite @snow_flake_mid_easing;
-		}
-
-		animation: snowfall_mid @snow_flake_mid_timing infinite @snow_flake_mid_easing;
-
 		&.second {
+			animation: snowfall_mid_second @snow_flake_mid_timing infinite @snow_flake_mid_easing;
+
 			& when (@snow_debug_mode = true){
 				&:before {
 					content: "Mid - SECOND";
 				}
 			}
-
-			& when (@snow_webkit_prefixes = true){
-				-webkit-animation: snowfall_mid_second @snow_flake_mid_timing infinite @snow_flake_mid_easing;
-			}
-
-			& when (@snow_moz_prefixes = true){
-				-moz-animation: snowfall_mid_second @snow_flake_mid_timing infinite @snow_flake_mid_easing;
-			}
-
-			& when (@snow_ms_prefixes = true){
-				-ms-animation: snowfall_mid_second @snow_flake_mid_timing infinite @snow_flake_mid_easing;
-			}
-
-			& when (@snow_o_prefixes = true){
-				-o-animation: snowfall_mid_second @snow_flake_mid_timing infinite @snow_flake_mid_easing;
-			}
-
-			animation: snowfall_mid_second @snow_flake_mid_timing infinite @snow_flake_mid_easing;
 		}
 	}
 
@@ -234,12 +120,18 @@ body {
 		position: absolute;
 		top: 0;
 		left: 0;
+
+		z-index: @snow_flake_back_z-index;
+
 		width: 100%;
 		height: 100%;
+
 		pointer-events: none;
 		user-select: none;
+
 		background: url(@snow_flake_back_image);
-		z-index: @snow_flake_back_z-index;
+
+		animation: snowfall_back @snow_flake_back_timing infinite @snow_flake_back_easing;
 
 		& when (@snow_debug_mode = true){
 			border: 1px solid black;
@@ -249,48 +141,14 @@ body {
 			}
 		}
 
-		& when (@snow_webkit_prefixes = true){
-			-webkit-animation: snowfall_back @snow_flake_back_timing infinite @snow_flake_back_easing;
-		}
-
-		& when (@snow_moz_prefixes = true){
-			-moz-animation: snowfall_back @snow_flake_back_timing infinite @snow_flake_back_easing;
-		}
-
-		& when (@snow_ms_prefixes = true){
-			-ms-animation: snowfall_back @snow_flake_back_timing infinite @snow_flake_back_easing;
-		}
-
-		& when (@snow_o_prefixes = true){
-			-o-animation: snowfall_back @snow_flake_back_timing infinite @snow_flake_back_easing;
-		}
-
-		animation: snowfall_back @snow_flake_back_timing infinite @snow_flake_back_easing;
-
 		&.second {
+			animation: snowfall_back_second @snow_flake_back_timing infinite @snow_flake_back_easing;
+
 			& when (@snow_debug_mode = true){
 				&:before {
 					content: "Back - SECOND";
 				}
 			}
-
-			& when (@snow_webkit_prefixes = true){
-				-webkit-animation: snowfall_back_second @snow_flake_back_timing infinite @snow_flake_back_easing;
-			}
-
-			& when (@snow_moz_prefixes = true){
-				-moz-animation: snowfall_back_second @snow_flake_back_timing infinite @snow_flake_back_easing;
-			}
-
-			& when (@snow_ms_prefixes = true){
-				-ms-animation: snowfall_back_second @snow_flake_back_timing infinite @snow_flake_back_easing;
-			}
-
-			& when (@snow_o_prefixes = true){
-				-o-animation: snowfall_back_second @snow_flake_back_timing infinite @snow_flake_back_easing;
-			}
-
-			animation: snowfall_back_second @snow_flake_back_timing infinite @snow_flake_back_easing;
 		}
 	}
 }
