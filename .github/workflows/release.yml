@@ -22,16 +22,6 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
-        registry-url: 'https://npm.pkg.github.com'
-        scope: '@wufr'
-    - name: Install dependencies
-      run: npm install
-    - name: Build
-      run: npm run build
-    - name: Configure Git
-      run: |
-        git config --global user.email "wUFr@users.noreply.github.com"
-        git config --global user.name "Jiří Bělský"
     - name: Configure npm to use GitHub Packages
       run: |
         echo "@wufr:registry=https://npm.pkg.github.com" > ~/.npmrc
