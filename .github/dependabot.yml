@@ -5,7 +5,12 @@
 
 version: 2
 updates:
-  - package-ecosystem: "" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "github-actions"
+    directory: "/.github/workflows" # Location of the GitHub Actions workflows
     schedule:
-      interval: "weekly"
+      interval: "daily"
+
+  - package-ecosystem: "npm"
+    directory: "/" # Location of the package.json file
+    schedule:
+      interval: "daily"
