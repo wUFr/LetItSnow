@@ -14,7 +14,7 @@
     "laravel-mix": "^6.0.6",
     "less": "^4.4.2",
     "less-loader": "^12.3.0",
-    "semantic-release": "^24.2.9"
+    "semantic-release": "^25.0.2"
   },
   "author": "wUFr",
   "license": "MIT",
