@@ -9,7 +9,7 @@
     "buildProd": "mix --production"
   },
   "devDependencies": {
-    "@semantic-release/github": "^12.0.5",
+    "@semantic-release/github": "^12.0.6",
     "@semantic-release/npm": "^13.1.4",
     "laravel-mix": "^6.0.6",
     "less": "^4.5.1",
