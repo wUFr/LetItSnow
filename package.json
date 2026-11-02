@@ -13,7 +13,7 @@
     "@semantic-release/npm": "^13.2.0",
     "laravel-mix": "^6.0.6",
     "less": "^4.9.1",
-    "less-loader": "^13.0.0",
+    "less-loader": "^13.1.0",
     "semantic-release": "^25.0.9"
   },
   "author": "wUFr",
